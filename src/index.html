@@ -28,7 +28,6 @@
                             </svg>
                             <p class="text-base font-semibold text-gray-300 tracking-wide">Dashboard</p>
                         </a>
-
                     </div>
 
                     <div class="py-4 px-4">
@@ -42,9 +41,15 @@
                             <input class="text-sm text-gray-300 outline-none bg-transparent px-1 max-w-[130px]"
                                 placeholder="Search..." />
                         </div>
-                        <ul class="space-y-2 mt-6">
+                        <ul class="menu space-y-2 mt-6">
                             <li>
                                 <a href="javascript:void(0)"
+                                onclick="document.getElementById('Dashboard').style.display='block';
+                                document.getElementById('Products').style.display='none';
+                                document.getElementById('NewProduct').style.display='none';
+                                this.style.backgroundColor='white'; this.style.color='black';
+                                resetOtherLinks(this);"
+
                                     class="text-gray-300 text-sm flex items-center cursor-pointer hover:bg-[#0b1739] rounded-md px-3 py-2.5 transition-all duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                         class="w-[18px] h-[18px] mr-3" viewBox="0 0 24 24">
@@ -56,39 +61,15 @@
                                             data-original="#000000" />
                                     </svg>
                                     <span class="overflow-hidden text-ellipsis whitespace-nowrap">Dashboard</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="arrowIcon w-2.5 h-2.5 fill-current -rotate-90 ml-auto transition-all duration-500"
-                                        viewBox="0 0 451.847 451.847">
-                                        <path
-                                            d="M225.923 354.706c-8.098 0-16.195-3.092-22.369-9.263L9.27 151.157c-12.359-12.359-12.359-32.397 0-44.751 12.354-12.354 32.388-12.354 44.748 0l171.905 171.915 171.906-171.909c12.359-12.354 32.391-12.354 44.744 0 12.365 12.354 12.365 32.392 0 44.751L248.292 345.449c-6.177 6.172-14.274 9.257-22.369 9.257z"
-                                            data-original="#000000" />
-                                    </svg>
                                 </a>
-                                <ul
-                                    class="sub-menu max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out ml-8">
-                                    <li>
-                                        <a href="javascript:void(0)"
-                                            class="text-gray-300 text-sm block cursor-pointer hover:bg-[#0b1739] rounded-md px-3 py-2 transition-all duration-300">
-                                            <span>Analytics</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"
-                                            class="text-gray-300 text-sm block cursor-pointer hover:bg-[#0b1739] rounded-md px-3 py-2 transition-all duration-300">
-                                            <span>Logistics</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"
-                                            class="text-gray-300 text-sm block cursor-pointer hover:bg-[#0b1739] rounded-md px-3 py-2 transition-all duration-300">
-                                            <span>Academy</span>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
 
                             <li>
                                 <a href="javascript:void(0)"
+                                onclick="document.getElementById('Dashboard').style.display='none';
+                                document.getElementById('Products').style.display='none';
+                                document.getElementById('NewProduct').style.display='none';
+                                resetOtherLinksMenu(this);"
                                     class="text-gray-300 text-sm flex items-center cursor-pointer hover:bg-[#0b1739] rounded-md px-3 py-2.5 transition-all duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                         class="w-[18px] h-[18px] mr-3" viewBox="0 0 24 24">
@@ -113,20 +94,25 @@
                                     class="sub-menu max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out ml-8">
                                     <li>
                                         <a href="javascript:void(0)"
+                                            onclick="document.getElementById('Products').style.display='block';
+                                            document.getElementById('Dashboard').style.display='none';
+                                            document.getElementById('NewProduct').style.display='none';
+                                            this.style.backgroundColor='white'; this.style.color='black';
+                                            resetOtherLinks(this);"
+
                                             class="text-gray-300 text-sm block cursor-pointer hover:bg-[#0b1739] rounded-md px-3 py-2 transition-all duration-300">
-                                            <span>Help center</span>
+                                            <span>Products</span>
                                         </a>
-                                    </li>
                                     <li>
                                         <a href="javascript:void(0)"
+                                            onclick="document.getElementById('NewProduct').style.display='block';
+                                            document.getElementById('Dashboard').style.display='none';
+                                            document.getElementById('Products').style.display='none';   
+                                            this.style.backgroundColor='white'; this.style.color='black';
+                                            resetOtherLinks(this);"
+
                                             class="text-gray-300 text-sm block cursor-pointer hover:bg-[#0b1739] rounded-md px-3 py-2 transition-all duration-300">
-                                            <span>Article</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"
-                                            class="text-gray-300 text-sm block cursor-pointer hover:bg-[#0b1739] rounded-md px-3 py-2 transition-all duration-300">
-                                            <span>Education</span>
+                                            <span>New Product</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -173,6 +159,10 @@
 
                             <li>
                                 <a href="javascript:void(0)"
+                                onclick="document.getElementById('Dashboard').style.display='none';
+                                document.getElementById('Products').style.display='none';
+                                document.getElementById('NewProduct').style.display='none';
+                                    resetOtherLinksMenu(this);"
                                     class="text-gray-300 text-sm flex items-center cursor-pointer hover:bg-[#0b1739] rounded-md px-3 py-2.5 transition-all duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                         class="w-[18px] h-[18px] mr-3" viewBox="0 0 512 512">
@@ -214,6 +204,10 @@
 
                             <li>
                                 <a href="javascript:void(0)"
+                                onclick="document.getElementById('Dashboard').style.display='none';
+                                document.getElementById('Products').style.display='none';
+                                document.getElementById('NewProduct').style.display='none';
+                                resetOtherLinksMenu(this);"
                                     class="text-gray-300 text-sm flex items-center cursor-pointer hover:bg-[#0b1739] rounded-md px-3 py-2.5 transition-all duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                         class="w-[18px] h-[18px] mr-3" viewBox="0 0 25 25">
@@ -243,7 +237,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)" onclick="document.getElementById('addProducts').style.display='block'"
+                                        <a href="javascript:void(0)"
                                             class="text-gray-300 text-sm block cursor-pointer hover:bg-[#0b1739] rounded-md px-3 py-2 transition-all duration-300">
                                             <span>Logout</span>
                                         </a>
@@ -505,67 +499,152 @@
                         </div>
                     </div>
             </section> -->
+            
+            <section class="main-content w-full p-4 max-lg:ml-8 hidden" id="Dashboard">
+                <div>
+                    <div class="flex items-center">
+                        <h1>Dashboard</h1>
+                    </div>
+            </section>
 
-            <div id="addProducts" class="container mx-auto p-2 bg-white-300 rounded-lg shadow-lg mt-8">
-                <h1 class="text-black text-2xl font-bold mb-4">Add New Product</h1>
-                <form>
-                    <div class="p-4">
-                        <label class="block text-black-500 text-sm font-bold mb-2 font-[sans-serif]" for="product-name">
-                            Product Name
-                        </label>
-                        <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
-                            id="product-name" type="text">
+            <section class="main-content w-full p-4 max-lg:ml-8 hidden" id="NewProduct">
+                <div>
+                    <div class="flex items-center">
+                        <div class="container mx-auto p-2 bg-gray-150 rounded-lg shadow-lg">
+                            <h1 class="p-4 text-2xl font-bold mb-4">Add New Product</h1>
+                            <form>
+                                <div class="p-4">
+                                    <label class="block text-black-500 text-sm font-bold mb-2 font-[sans-serif]"
+                                        for="product-name">
+                                        Product Name
+                                    </label>
+                                    <input
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
+                                        id="product-name" type="text">
+                                </div>
+                                <div class="p-4">
+                                    <label class="block text-black-500 text-sm font-bold mb-2"
+                                        for="product-description">
+                                        Product Description
+                                    </label>
+                                    <textarea
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
+                                        id="product-description">
+                                    </textarea>
+                                </div>
+                                <div class="p-4">
+                                    <label class="block text-black-500 text-sm font-bold mb-2" for="product-category">
+                                        Product Category
+                                    </label>
+                                    <input
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
+                                        id="product-category" type="text">
+                                </div>
+                                <div class="p-4">
+                                    <label class="block text-black-500 text-sm font-bold mb-2" for="product-image">
+                                        Product Image
+                                    </label>
+                                    <label
+                                        class="bg-gray-300 text-black font-semibold text-base rounded h-52 flex flex-col items-center justify-center cursor-pointer border-2 border-gray-300 border-dashed mx-auto font-[sans-serif]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-11 mb-2 fill-gray-500"
+                                            viewBox="0 0 32 32" id="upload-icon">
+                                            <path
+                                                d="M23.75 11.044a7.99 7.99 0 0 0-15.5-.009A8 8 0 0 0 9 27h3a1 1 0 0 0 0-2H9a6 6 0 0 1-.035-12 1.038 1.038 0 0 0 1.1-.854 5.991 5.991 0 0 1 11.862 0A1.08 1.08 0 0 0 23 13a6 6 0 0 1 0 12h-3a1 1 0 0 0 0 2h3a8 8 0 0 0 .75-15.956z"
+                                                data-original="#000000" />
+                                            <path
+                                                d="M20.293 19.707a1 1 0 0 0 1.414-1.414l-5-5a1 1 0 0 0-1.414 0l-5 5a1 1 0 0 0 1.414 1.414L15 16.414V29a1 1 0 0 0 2 0V16.414z"
+                                                data-original="#000000" />
+                                        </svg>
+                                        <span id="file-name" class="text-xs font-medium text-gray-400 mt-2">Only .png, .jpeg, .jpg are allowed.</span>
+                                        <input type="file" id="product-image" class="hidden" accept=".jpg, .jpeg, .png"
+                                            onchange="displayFileName(this)" />
+                                        <img id="preview-image" class="hidden w-full h-full object-contain rounded" />
+                                    </label>
+                                </div>
+
+                                <div class="p-4 items-end justify-between">
+                                    <button
+                                        class="text-white bg-red-500 hover:bg-red-700 text-gray-300 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-[sans-serif]"
+                                        type="button">
+                                        Submit
+                                    </button>
+                                    <button
+                                        class="text-white bg-green-500 hover:bg-green-700 text-gray-300 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-[sans-serif]"
+                                        type="button">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="p-4">
-                        <label class="block text-black-500 text-sm font-bold mb-2" for="product-description">
-                            Product Description
-                        </label>
-                        <textarea
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
-                            id="product-description">
-                        </textarea>
+            </section>
+
+            <section class="main-content w-full p-4 max-lg:ml-8 hidden" id="Products">
+                <div>
+                    <div class="flex items-center">
+                        <div class="font-[sans-serif] overflow-x-auto">
+                            <table class="min-w-full bg-white">
+                                <thead class="bg-gray-800 whitespace-nowrap">
+                                    <tr>
+                                        <th class="p-4 text-left text-sm font-medium text-white">
+                                            ID
+                                        </th>
+                                        <th class="p-4 text-left text-sm font-medium text-white">
+                                            Name
+                                        </th>
+                                        <th class="p-4 text-left text-sm font-medium text-white">
+                                            Category
+                                        </th>
+                                        <th class="p-4 text-left text-sm font-medium text-white">
+                                            Discription
+                                        </th>
+                                        <th class="p-4 text-left text-sm font-medium text-white">
+                                            Create Date
+                                        </th>
+                                        <th class="p-4 text-left text-sm font-medium text-white">
+                                            Actions
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="whitespace-nowrap" id="product-list">
+                                    <script>
+                                        const products = [
+                                            { id: 1, name: 'Product A', category: 'Category 1', description: 'Description of Product A', date: '2023-10-01' },
+                                            { id: 2, name: 'Product B', category: 'Category 2', description: 'Description of Product B', date: '2023-10-02' }
+                                        ];
+
+                                        products.forEach(product => {
+                                            document.write(`
+                                                <tr>
+                                                    <td class="p-4 text-sm text-gray-700">${product.id}</td>
+                                                    <td class="p-4 text-sm text-gray-700">${product.name}</td>
+                                                    <td class="p-4 text-sm text-gray-700">${product.category}</td>
+                                                    <td class="p-4 text-sm text-gray-700">${product.description}</td>
+                                                    <td class="p-4 text-sm text-gray-700">${product.date}</td>
+                                                    <td class="p-4 text-sm text-gray-700">
+                                                        <button class="mr-4" title="Edit">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-blue-500 hover:fill-blue-700" viewBox="0 0 348.882 348.882">
+                                                                <path d="m333.988 11.758-.42-.383A43.363 43.363 0 0 0 304.258 0a43.579 43.579 0 0 0-32.104 14.153L116.803 184.231a14.993 14.993 0 0 0-3.154 5.37l-18.267 54.762c-2.112 6.331-1.052 13.333 2.835 18.729 3.918 5.438 10.23 8.685 16.886 8.685h.001c2.879 0 5.693-.592 8.362-1.76l52.89-23.138a14.985 14.985 0 0 0 5.063-3.626L336.771 73.176c16.166-17.697 14.919-45.247-2.783-61.418zM130.381 234.247l10.719-32.134.904-.99 20.316 18.556-.904.99-31.035 13.578zm184.24-181.304L182.553 197.53l-20.316-18.556L294.305 34.386c2.583-2.828 6.118-4.386 9.954-4.386 3.365 0 6.588 1.252 9.082 3.53l.419.383c5.484 5.009 5.87 13.546.861 19.03z" data-original="#000000" />
+                                                                <path d="M303.85 138.388c-8.284 0-15 6.716-15 15v127.347c0 21.034-17.113 38.147-38.147 38.147H68.904c-21.035 0-38.147-17.113-38.147-38.147V100.413c0-21.034 17.113-38.147 38.147-38.147h131.587c8.284 0 15-6.716 15-15s-6.716-15-15-15H68.904C31.327 32.266.757 62.837.757 100.413v180.321c0 37.576 30.571 68.147 68.147 68.147h181.798c37.576 0 68.147-30.571 68.147-68.147V153.388c.001-8.284-6.715-15-14.999-15z" data-original="#000000" />
+                                                            </svg>
+                                                        </button>
+                                                        <button class="mr-4" title="Delete">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-red-500 hover:fill-red-700" viewBox="0 0 24 24">
+                                                                <path d="M19 7a1 1 0 0 0-1 1v11.191A1.92 1.92 0 0 1 15.99 21H8.01A1.92 1.92 0 0 1 6 19.191V8a1 1 0 0 0-2 0v11.191A3.918 3.918 0 0 0 8.01 23h7.98A3.918 3.918 0 0 0 20 19.191V8a1 1 0 0 0-1-1Zm1-3h-4V2a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v2H4a1 1 0 0 0 0 2h16a1 1 0 0 0 0-2ZM10 4V3h4v1Z" data-original="#000000" />
+                                                                <path d="M11 17v-7a1 1 0 0 0-2 0v7a1 1 0 0 0 2 0Zm4 0v-7a1 1 0 0 0-2 0v7a1 1 0 0 0 2 0Z" data-original="#000000" />
+                                                            </svg>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            `);
+                                        });
+                                    </script>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="p-4">
-                        <label class="block text-black-500 text-sm font-bold mb-2" for="product-category">
-                            Product Category
-                        </label>
-                        <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
-                            id="product-category" type="text">
-                    </div>
-                    <div class="p-4">
-                        <label class="block text-black-500 text-sm font-bold mb-2" for="product-image">
-                            Product Image
-                        </label>
-                        <label
-                            class="bg-gray-300 text-black font-semibold text-base rounded h-52 flex flex-col items-center justify-center cursor-pointer border-2 border-gray-300 border-dashed mx-auto font-[sans-serif]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-11 mb-2 fill-gray-500" viewBox="0 0 32 32">
-                                <path
-                                    d="M23.75 11.044a7.99 7.99 0 0 0-15.5-.009A8 8 0 0 0 9 27h3a1 1 0 0 0 0-2H9a6 6 0 0 1-.035-12 1.038 1.038 0 0 0 1.1-.854 5.991 5.991 0 0 1 11.862 0A1.08 1.08 0 0 0 23 13a6 6 0 0 1 0 12h-3a1 1 0 0 0 0 2h3a8 8 0 0 0 .75-15.956z"
-                                    data-original="#000000" />
-                                <path
-                                    d="M20.293 19.707a1 1 0 0 0 1.414-1.414l-5-5a1 1 0 0 0-1.414 0l-5 5a1 1 0 0 0 1.414 1.414L15 16.414V29a1 1 0 0 0 2 0V16.414z"
-                                    data-original="#000000" />
-                            </svg>
-                            <span id="file-name" class="text-xs font-medium text-gray-400 mt-2">PNG, JPG SVG, WEBP, and GIF are Allowed.</span>
-                            <input type="file" id="product-image" class="hidden" onchange="displayFileName(this)" />
-                        </label>
-                    </div>
-                    <div class="p-4 items-end justify-between">
-                        <button
-                            class="text-white bg-red-500 hover:bg-red-700 text-gray-300 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-[sans-serif]"
-                            type="button">
-                            Submit
-                        </button>
-                        <button
-                            class="text-white bg-green-500 hover:bg-green-700 text-gray-300 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-[sans-serif]"
-                            type="button">
-                            Cancel
-                        </button>
-                    </div>
-                </form>
-            </div>
+            </section>
         </div>
 </body>
 

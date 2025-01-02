@@ -37,7 +37,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  
+
+  //function to reset other links on the menu
+  function resetOtherLinksMenu(activeLink) {
+    const links = document.querySelectorAll('.menu a');
+    links.forEach(link => {
+        if (link !== activeLink) {
+            link.style.backgroundColor = '';
+            link.style.color = '';
+        }
+    });
+  }
+
+  //function to reset other links in the submenu
+  function resetOtherLinks(activeLink) {
+    const links = document.querySelectorAll('.sub-menu a');
+    links.forEach(link => {
+        if (link !== activeLink) {
+            link.style.backgroundColor = '';
+            link.style.color = '';
+        }
+    });
+  }
+
+  //function to display file name in input field
   function displayFileName(input) {
-    const fileName = input.files[0] ? input.files[0].name : 'PNG, JPG SVG, WEBP, and GIF are Allowed.';
-    document.getElementById('file-name').textContent = fileName;
+    const file = input.files[0];
+    const fileName = document.getElementById('file-name');
+    const previewImage = document.getElementById('preview-image');
+    const uploadIcon = document.getElementById('upload-icon');
+
+    if (file) {
+        fileName.textContent = file.name;
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            previewImage.src = e.target.result;
+            previewImage.classList.remove('hidden');
+            uploadIcon.classList.add('hidden');
+        };
+        reader.readAsDataURL(file);
+    } else {
+        fileName.textContent = 'Only .png, .jpeg, .jpg are allowed.';
+        previewImage.classList.add('hidden');
+        uploadIcon.classList.remove('hidden');
+    }
   }
